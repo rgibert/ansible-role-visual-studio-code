@@ -41,3 +41,4 @@ GPLv3
 Richard Gibert
 [richard@gibert.ca](mailto:richard@gibert.ca)
 [https://richard.gibert.ca](https://richard.gibert.ca/)
+
