@@ -1,0 +1,7 @@
+---
+- name: install package
+  apt:
+    deb: "{{ visual_studio_code_repo_root}}/linux-deb-{{ visual_studio_code_arch }}/stable"
+    state: present
+  become: true
+  become_user: root

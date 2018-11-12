@@ -1,0 +1,10 @@
+---
+- block:
+
+    - name: load arch specific vars
+      include_vars: "{{ ansible_architecture }}.yml"
+    - name: run OS family specific install
+      include_tasks: "install-{{ ansible_os_family }}.yml"
+
+  tags:
+    - visual-studio-code
