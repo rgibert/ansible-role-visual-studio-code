@@ -6,9 +6,9 @@ env:
   global:
     - ROLE_NAME: visual_studio_code
   matrix:
-    - MOLECULE_DISTRO: ubuntu:artful
+    - MOLECULE_DISTRO: centos:8
     - MOLECULE_DISTRO: ubuntu:bionic
-    - MOLECULE_DISTRO: ubuntu:cosmic
+    - MOLECULE_DISTRO: ubuntu:eoan
     - MOLECULE_DISTRO: ubuntu:xenial
 before_install:
   - sudo apt-get -qq update
@@ -16,7 +16,7 @@ install:
   - pip install molecule docker
 before_script:
   - cd ../
-  - mv ansible-role-${ROLE_NAME//_/-} rgibert.$ROLE_NAME
-  - cd rgibert.$ROLE_NAME
+  - mv ansible-role-${ROLE_NAME//_/-} rgibert.${ROLE_NAME}
+  - cd rgibert.${ROLE_NAME}
 script:
   - molecule test

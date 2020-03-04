@@ -17,6 +17,7 @@ Ansible role to install Visual Studio Code
 | Variable | Default | Description |
 |----------|---------|-------------|
 | visual_studio_code_arch | | Architecture of the binaries to install |
+| visual_studio_code_pkg_type | | OS Packaging format |
 | visual_studio_code_repo_root | https://vscode-update.azurewebsites.net/latest | Root URI for downloads |
 
 ## Dependencies
@@ -38,7 +39,6 @@ GPLv3
 
 ## Author Information
 
-Richard Gibert
-[richard@gibert.ca](mailto:richard@gibert.ca)
+Richard Gibert  
+[richard@gibert.ca](mailto:richard@gibert.ca)  
 [https://richard.gibert.ca](https://richard.gibert.ca/)
-

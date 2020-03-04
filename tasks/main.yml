@@ -3,8 +3,16 @@
 
     - name: load arch specific vars
       include_vars: "{{ ansible_architecture }}.yml"
-    - name: run OS family specific install
-      include_tasks: "install-{{ ansible_os_family }}.yml"
+    
+    - name: load os specific vars
+      include_vars: "{{ ansible_os_family }}.yml"
+
+    - name: install package
+      package:
+        name: "{{ visual_studio_code_repo_root}}/linux-{{ visual_studio_code_pkg_type }}-{{ visual_studio_code_arch }}/stable"
+        state: present
+      become: true
+      become_user: root
 
   tags:
     - visual-studio-code
