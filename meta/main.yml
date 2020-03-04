@@ -15,5 +15,5 @@ galaxy_info:
         - eoan
         - xenial
   galaxy_tags:
-    - visual-studio-code
+    - visualstudiocode
 dependencies: []
