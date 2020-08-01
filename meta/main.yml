@@ -6,6 +6,9 @@ galaxy_info:
   license: GPLv3
   min_ansible_version: 1.2
   platforms:
+    - name: Archlinux
+      versions: 
+        - all
     - name: Ubuntu
       versions:
         - artful
@@ -13,5 +16,5 @@ galaxy_info:
         - cosmic
         - xenial
   galaxy_tags:
-    - visual-studio-code
+    - visual_studio_code
 dependencies: []
